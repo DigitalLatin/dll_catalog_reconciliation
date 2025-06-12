@@ -3,6 +3,10 @@ Icon?
 .dropbox
 .ipynb_checkpoints/
 
+# Model Directories
+authors/
+greek/
+
 # LibreOffice locks
 .~lock.*#
 *~
