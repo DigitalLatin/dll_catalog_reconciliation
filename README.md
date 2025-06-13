@@ -26,6 +26,10 @@ Indeed, this entire project is an example of how AI can accelerate digital schol
 
 ## Structure of this Repository
 
+### colab
+
+This directory contains versions of the Jupyter notebooks and copies of the data files for use on Google Colab. The difference is that `pip` statements have been added to install the necessary modules that aren't included in the standard Colab environment. Each notebook includes an introductory statement about the data files that must be uploaded into the Colab environment.
+
 ### data
 
 The `data` directory contains several CSV files used in the Jupyter Notebooks in the `python` directory.
@@ -41,21 +45,21 @@ The most important files in `data` are:
 
 ### output
 
-The `output` directory contains files generated during analysis.
+The `output` directory contains files generated during analysis. Note that some of these files are reused as data files in some notebooks.
 
 ### python
 
 This directory contains the Jupyter notebooks and Python files used in working with and analyzing the data. 
 
-The file `python/fine_tune_distilmbert_author_local.ipynb` was used to fine-tune the [DistilBERT Multilingual Cased](https://huggingface.co/distilbert/distilbert-base-multilingual-cased) model to create a model for matching the names of authors of Latin texts with their Digital Latin Library ID: [sjhuskey/distilbert_multilingual_cased_latin_author_identifier](<https://huggingface.co/sjhuskey/distilbert_multilingual_cased_latin_author_identifier>). A version of that notebook with `_colab` appended to the filename is available for use on Google Colab.
+The file `python/fine_tune_distilmbert_author_local.ipynb` was used to fine-tune the [DistilBERT Multilingual Cased](https://huggingface.co/distilbert/distilbert-base-multilingual-cased) model to create a model for matching the names of authors of Latin texts with their Digital Latin Library ID: [sjhuskey/distilbert_multilingual_cased_latin_author_identifier](<https://huggingface.co/sjhuskey/distilbert_multilingual_cased_latin_author_identifier>). A version of that notebook is available in the `colab` directory for use on Google Colab.
 
-The file `python/fine_tune_distilmbert_greek_local.ipynb` was used to fine-tune the [DistilBERT Multilingual Cased](https://huggingface.co/distilbert/distilbert-base-multilingual-cased) model to create a model for labeling names of authors as "Greek" or "Latin", according to the language in which they primarily wrote: [sjhuskey/distilbert_multilingual_cased_greek_latin_classifier](<https://huggingface.co/sjhuskey/distilbert_multilingual_cased_greek_latin_classifier>). A version of that notebook with `_colab` appended to the filename is available for use on Google Colab.
+The file `python/fine_tune_distilmbert_greek_local.ipynb` was used to fine-tune the [DistilBERT Multilingual Cased](https://huggingface.co/distilbert/distilbert-base-multilingual-cased) model to create a model for labeling names of authors as "Greek" or "Latin", according to the language in which they primarily wrote: [sjhuskey/distilbert_multilingual_cased_greek_latin_classifier](<https://huggingface.co/sjhuskey/distilbert_multilingual_cased_greek_latin_classifier>). A version of that notebook is available in the `colab` directory for use on Google Colab.
 
-The file `author_matching.ipynb` is the main notebook for running the models to identify authors as Greek or Latin and to reconcile them with authority records in the DLL Catalog.
+The file `author_matching.ipynb` is the main notebook for running the models to identify authors as Greek or Latin and to reconcile them with authority records in the DLL Catalog. A version of that notebook is available in the `colab` directory for use on Google Colab.
 
-The file `title_matching.ipynb` was used to attempt to reconcile titles from the test dataset to DLL Catalog work records. It requires the use of a different virtual environment, which can be reproduced by running `conda install --yes --file requirements-dllspacy.txt` in the root directory of this repository.
+The file `title_matching.ipynb` was used to attempt to reconcile titles from the test dataset to DLL Catalog work records. It requires the use of a different virtual environment, which can be reproduced by running `conda install --yes --file requirements-dllspacy.txt` in the root directory of this repository. A version of that notebook is available in the `colab` directory for use on Google Colab.
 
-The file `model_probabilistic_deterministic.ipynb` compares the inferences of the models to deterministic and probabilistic (fuzzy) matching.
+The file `model_probabilistic_deterministic.ipynb` compares the inferences of the models to deterministic and probabilistic (fuzzy) matching. A version of that notebook is available in the `colab` directory for use on Google Colab.
 
 `utilities.py` contains some repeated functions that are used in the Jupyter notebooks.
 
@@ -66,6 +70,7 @@ The `cleaning_exploration` directory contains files used to, well, clean the dat
 ```bash
 |-- LICENSE
 |-- README.md
+|-- colab
 |-- data
 |-- output
 |-- python
@@ -73,10 +78,9 @@ The `cleaning_exploration` directory contains files used to, well, clean the dat
     |-- greek_cleanup
     |-- input
     |-- output
+  |-- author_matching.ipynb
   |-- data-preparation.ipynb
-  |-- fine_tune_distilmbert_author_colab.ipynb
   |-- fine_tune_distilmbert_author_local.ipynb
-  |-- fine_tune_distilmbert_greek_colab.ipynb
   |-- fine_tune_distilmbert_greek_local.ipynb
   |-- model_probabilistic_deterministic.ipynb
   |-- title_matching.ipynb
