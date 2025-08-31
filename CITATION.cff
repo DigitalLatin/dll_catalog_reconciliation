@@ -1,0 +1,29 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Digital Latin Library Catalog Reconciliation
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Samuel J.
+    family-names: Huskey
+    email: huskey@ou.edu
+    affiliation: University of Oklahoma
+    orcid: 'https://orcid.org/0000-0002-8192-9385'
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.17014271
+repository-code: 'https://github.com/DigitalLatin/dll_catalog_reconciliation'
+abstract: >-
+  Code for experimenting with machine learning models to
+  process metadata records for editions of Latin works to be
+  added to the DLL Catalog.
+keywords:
+  - machine learning
+  - artificial intelligence
+  - natural language processing
+  - Latin language
+license: AGPL-3.0

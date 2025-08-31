@@ -92,3 +92,6 @@ The `cleaning_exploration` directory contains files used to, well, clean the dat
 ## License
 
 The contents of this repository are licensed under the terms of the [GNU Affero General Public License](https://www.gnu.org/licenses/agpl-3.0.html).
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17014271.svg)](https://doi.org/10.5281/zenodo.17014271)
+
